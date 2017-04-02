@@ -1,15 +1,25 @@
 from flightsearch import flightsearch
-import requests
+from selenium import webdriver
+from bs4 import BeautifulSoup
 from lxml import html
 
 def getkayak(flightsearch):
+    PHANTOMJS_PATH = './phantomjs.exe'
+
     link = kayaklink(flightsearch)
     print(link)
-    kayak_search = requests.get(link)
-    if kayak_search.status_code == 200:
-        kayak_tree = html.fromstring(kayak_search.content)
-        result = str(kayak_tree.xpath('/html/body/table/tbody/tr[1]/td[2]/text()'))
-        #//*[@id="priceAnchor234"]/a
+    browser = webdriver.PhantomJS(PHANTOMJS_PATH)
+    browser.get(link)
+
+    kayak_search = BeautifulSoup(browser.page_source, "html.parser")
+    kayak_tree = html.fromstring(kayak_search.content)
+    result = kayak_tree #str(kayak_tree.xpath('//*[@id="priceAnchor264"]/a'))
+    #result = soup.find_all('tr', {'class': 'stage-finished'})
+    #kayak_search = requests.get(link)
+    #if kayak_search.status_code == 200:
+        #kayak_tree = html.fromstring(kayak_search.content)
+        #result = kayak_search.content #str(kayak_tree.xpath('/html/body/table/tbody/tr[1]/td[2]/text()'))
+        #//*[@id=""]/a
         #//*[@id="priceAnchor160"]/a
         #//*[@id="content_div"]/div[6]/div/div/div[1]/div[1]
         #//*[@id="infolink478"]/div[2]/div[2]/div[4]/div[1]/div[2]
