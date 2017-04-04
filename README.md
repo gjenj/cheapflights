@@ -13,9 +13,10 @@ This project isn't necessarily intended to turn into an app or package, it's to 
 ### Long-term:
 * Different travel websites use different methods for cost and route optimization. However, if every site is truly optimized to find you the cheapest flights, how am I able to consistently find a cheaper route by using different websites? My long term goal is to set up batch jobs to aggregate and store flight searches in a NoSQL database, such as HBase, and compute the cheapest way to get from point to point by combining different results for different websites using Spark. 
 
+<!---
 ## Solution
 
-<!---
+
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
 ## Code Example
