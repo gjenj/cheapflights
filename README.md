@@ -2,9 +2,11 @@
 A personal project to aggregate flight searches from multipe travel websites such as Kayak, Kiwi, FlightHub, etc.
 
 ## Motivation
-I'm an avid traveller. In the Fall of 2016 I was planning an across-the-globe trip - start in Canada, travel across the Atlantic to Europe and then on to India, Japan, and Hong Kong, and finally back to Canada over the Pacific. While planning, I discovered that the results for airfare (especially multi-city airfare) varied from site to site. I searched for days, and I was able to knock off over $400 off of my initial searches by buying tickets from three differest websites. Beaming with pride, I often gloated to my friends and family how I'm the master of finding the cheapest flight for anywhere you want to go; the more complicated path, the more I could knock off. However, that also got me thinking - did I really find the cheapest flight one could possibly find? What if I had search for a few more days? Different travel websites use different algorithms for cost optimization, however 
+I'm an avid traveller. In the Fall of 2016 I was planning an across-the-globe trip spanning Europe, India, Japan, and Hong Kong; I'd depart over the Atlantic and return over the Pacific. While planning, I discovered that the results for airfare (especially multi-city airfare) varied from site to site. I searched for days, and I was able to knock off over $400 off of my initial searches by buying tickets from three differest websites. Beaming with pride over my greatest accomplishment since making an edible meal, I often gloated to my friends and family how I'm the master of finding the cheapest flights one could find. My smugness cost me my reputation as a meek and humble individual. However, the more I bragged, the more that got me thinking - did I really find the cheapest flight one could possibly find? How can I guaranteed that it is the cheapest? What if I had searched for a few more days? 
 
 ## Goal
+Different travel websites use different methods for cost and route optimization, however my question is that if everyone is truly optimized, how was I able to find a cheaper route?
+
 This project isn't necessarily intended to turn into an app or package, it's to practice Python, Hadoop, and Spark while solving a problem I love to tackle for myself and my friends - finding cheap airfare. If the solution turns into something bigger, all the better!
 
 ## Solution
