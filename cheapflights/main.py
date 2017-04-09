@@ -7,6 +7,7 @@ from flightsearch import flightsearch, flightresult
 import os
 import uuid
 import time
+from pprint import pprint
 
 def main():
     flyfrom = 'YYZ' #input("Enter departure city or airport code, e.g. Toronto or YYZ:\n")
@@ -24,7 +25,8 @@ def main():
     search.searchendtime = time.time()
 
     for key, value in results.items():
-        print(value)
+        for item in value:
+            pprint(vars(item))
 
 ## This function aggegates the various results obtained from the modules in the ./getresults folder
 def aggregatedflights(flightsearch):
@@ -39,7 +41,11 @@ def aggregatedflights(flightsearch):
         else:
             continue
 
-    return resultdict
+    return sortbyprice(resultdict)
+
+def sortbyprice(flightresult):
+    ## Coming soon
+    return flightresult
     
 if __name__ == '__main__':
     main()
